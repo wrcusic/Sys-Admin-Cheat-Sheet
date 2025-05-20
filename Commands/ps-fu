@@ -1,0 +1,32 @@
+Powershell Commands:
+
+Repair Trust Relationship on domain-joined computers:
+
+Reset-ComputerMachinePassword -Server [DomainServer] -Credential [DomainName]\[Admin Username]  -- Resets computer password and syncs with AD
+Test-ComputerSecureChannel  																	-- Tests if the Trust Relationship has been restored
+Test-ComputerSecureChannel -Repair -Credential [DomainName]\[Admin User]  						-- Use if Test cmdlet returns 'FALSE' to repair trust relationship
+
+____________________________________________________________________________
+
+Start-Transcript	-- Writes commands and outputs during session to txt file
+Stop-Transcript		-- Stops writing to txt file
+
+Transcript Options:
+-Append				-- adds new transcript to the end of an existing file
+-Confirm			-- prompts for confirmation before running cmdlet
+-NoClobber			-- prevents overwriting file
+-Path				-- location for transcript file
+
+___________________________________________________________________________
+
+Get-ADUser -Filter *	-- Enumerates AD user accounts
+
+___________________________________________________________________________
+
+Windows Update:
+Install-Module PSWindowsUpdate		-- install Windows Update module
+Import-Module PSWindowsUpdate		-- Enable Windows UPdate module
+Get-WindowsUpdate					-- check for available updates
+Install-WindowsUpdate				-- install found updates
+
+___________________________________________________________________________
