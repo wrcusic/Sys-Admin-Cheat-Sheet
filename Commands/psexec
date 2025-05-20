@@ -1,0 +1,8 @@
+# WIP #
+
+
+# Pop a cmd shell on a remote PC
+c:\[path-to-tools]\PsExec64.exe \\[remotePCname] -u [username] -p [password] -s cmd.exe
+
+
+c:\tools\pstools\PsExec64.exe -s -i regedit
