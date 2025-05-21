@@ -1,4 +1,4 @@
-# Automation script to reset local user passwords
+# Reset local user passwords. Content in "[]" needs to be changed to relevant usernames and passwords. Will work on an interactive version of this script.
 
 ECHO 'Y' Set-ExecutionPolicy Bypass
 
@@ -7,5 +7,5 @@ $Username = Get-LocalUser -Name "[username]"
 
 $Username | Set-LocalUser -Password $Password
 
-# Uncomment if you want the user's password to never expire
+# Uncomment below if you want the user's password to never expire:
 #$Username | Set-LocalUser -PasswordNeverExpires $True
