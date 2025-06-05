@@ -30,3 +30,8 @@ Get-WindowsUpdate					-- check for available updates
 Install-WindowsUpdate				-- install found updates
 
 ___________________________________________________________________________
+
+Add Computer to Domain:
+Add-Computer -DomainName domain -Server domain\DCname -PassThru -Verbose
+
+___________________________________________________________________________
